@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="LoginUIKit.Pages.Calashop.LoginPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles/Calashop/Styles.xaml" />
+        <ResourceDictionary Source="/Resources/Styles/Calashop/Colors.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <StyleSheet Source="/Resources/Styles/MainStyle.css" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <Grid RowDefinitions="175, *">
+        <Label
+          Grid.Row="0"
+          BackgroundColor="{StaticResource PrimaryColor}"
+          FontFamily="ArimoBold"
+          FontSize="40"
+          HorizontalTextAlignment="Center"
+          Text="Calashop"
+          TextColor="{StaticResource White}"
+          VerticalOptions="Fill"
+          VerticalTextAlignment="Center" />
+
+        <VerticalStackLayout
+          Grid.Row="1"
+          Margin="24"
+          Spacing="16">
+
+          <Label Style="{StaticResource TitleLabel}" Text="Login Account" />
+          <Label Style="{StaticResource InfoLabel}" Text="Hello, you must login first to be able to use the application and enjoy all the features in Calashop" />
+
+          <StackLayout
+            Margin="0,8,0,0"
+            Orientation="Vertical"
+            Spacing="8">
+
+            <core:SfTextInputLayout Hint="E-Mail" Style="{StaticResource InputLayoutStylex}">
+              <Entry Keyboard="Email" />
+              <core:SfTextInputLayout.HintLabelStyle>
+                <core:LabelStyle
+                  FontFamily="ArimoRegular"
+                  FontSize="16"
+                  TextColor="{AppThemeBinding Light={StaticResource TextColor},
+                                              Dark={StaticResource TextColorDm}}" />
+              </core:SfTextInputLayout.HintLabelStyle>
+            </core:SfTextInputLayout>
+
+            <core:SfTextInputLayout
+              EnablePasswordVisibilityToggle="True"
+              Hint="Password"
+              Style="{StaticResource InputLayoutStylex}">
+              <Entry />
+              <core:SfTextInputLayout.HintLabelStyle>
+                <core:LabelStyle
+                  FontFamily="ArimoRegular"
+                  FontSize="16"
+                  TextColor="{AppThemeBinding Light={StaticResource TextColor},
+                                              Dark={StaticResource TextColorDm}}" />
+              </core:SfTextInputLayout.HintLabelStyle>
+            </core:SfTextInputLayout>
+
+            <Label
+              FontFamily="ArimoBold"
+              HorizontalOptions="EndAndExpand"
+              HorizontalTextAlignment="End"
+              Text="Forgot Password?"
+              TextColor="{StaticResource PrimaryColor}" />
+          </StackLayout>
+
+          <Button
+            Margin="0,12,0,0"
+            BackgroundColor="{StaticResource ButtonColor}"
+            CornerRadius="24"
+            FontFamily="ArimoBold"
+            FontSize="16"
+            HeightRequest="56"
+            Text="Sign In"
+            TextColor="White" />
+
+          <Grid
+            Margin="0,12,0,0"
+            ColumnDefinitions="*,Auto,*"
+            ColumnSpacing="12">
+            <BoxView
+              Grid.Column="0"
+              BackgroundColor="{AppThemeBinding Light={StaticResource StrokeColor},
+                                                Dark={StaticResource White}}"
+              HeightRequest="1" />
+            <Label
+              Grid.Column="1"
+              Text="Or Sign In With"
+              TextColor="{StaticResource TextColor}" />
+            <BoxView
+              Grid.Column="2"
+              BackgroundColor="{AppThemeBinding Light={StaticResource StrokeColor},
+                                                Dark={StaticResource White}}"
+              HeightRequest="1" />
+          </Grid>
+          <Grid
+            Margin="0,10,0,0"
+            ColumnDefinitions="*, *"
+            ColumnSpacing="20">
+            <Frame
+              Grid.Column="0"
+              BackgroundColor="{AppThemeBinding Light={StaticResource LoginImageButtonColor},
+                                                Dark={StaticResource White}}"
+              CornerRadius="26"
+              HasShadow="False"
+              HeightRequest="56">
+              <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Source="google.png" />
+                <Label
+                  Margin="8,0,0,0"
+                  FontFamily="ArimoRegular"
+                  FontSize="14"
+                  Text="Google" />
+              </HorizontalStackLayout>
+            </Frame>
+            <Frame
+              Grid.Column="1"
+              BackgroundColor="{AppThemeBinding Light={StaticResource LoginImageButtonColor},
+                                                Dark={StaticResource White}}"
+              CornerRadius="26"
+              HasShadow="False"
+              HeightRequest="56">
+              <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Aspect="AspectFit" Source="facebook.png" />
+                <Label
+                  Margin="8,0,0,0"
+                  FontFamily="ArimoRegular"
+                  FontSize="14"
+                  Text="Facebook" />
+              </HorizontalStackLayout>
+            </Frame>
+          </Grid>
+          <HorizontalStackLayout Margin="0,10,0,0" Spacing="6">
+            <Label Style="{StaticResource InfoLabel}" Text="Don't have an account?" />
+            <Label
+              FontFamily="ArimoBold"
+              HorizontalOptions="EndAndExpand"
+              HorizontalTextAlignment="End"
+              Text="Join Us"
+              TextColor="{StaticResource PrimaryColor}" />
+          </HorizontalStackLayout>
+        </VerticalStackLayout>
+      </Grid>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

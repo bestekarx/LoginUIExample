@@ -1,0 +1,12 @@
+﻿.nonBorderEntry {
+    border-bottom: 0px solid transparent;
+    border-color:transparent;
+    font-family: 
+}
+
+.detailPageSubtitle {
+    text-align: center;
+    font-style: italic;
+    color:orangered;
+    background-color:yellow;
+}

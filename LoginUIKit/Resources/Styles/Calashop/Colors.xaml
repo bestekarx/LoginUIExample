@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+  <!--  Dm => DarkMode  -->
+
+  <Color x:Key="PrimaryColor">#F8623A</Color>
+  <Color x:Key="ButtonColor">#F8623A</Color>
+  <Color x:Key="TitleColor">#222222</Color>
+  <Color x:Key="TitleColorDm">#FFFFFF</Color>
+  <Color x:Key="SubTitleColor">#EA9459</Color>
+  <Color x:Key="TextColor">#888888</Color>
+  <Color x:Key="TextColorDm">#FFFFFF</Color>
+  <Color x:Key="BorderColor">#0F0D23</Color>
+  <Color x:Key="StrokeColor">#F2F2F2</Color>
+  <Color x:Key="White">#ffffff</Color>
+  <Color x:Key="LoginImageButtonColor">#FAFAFA</Color>
+
+</ResourceDictionary>
